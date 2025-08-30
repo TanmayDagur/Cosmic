@@ -42,7 +42,7 @@ export function Offer() {
           ))}
         </div>
 
-        <Button className="mt-6">Visit Now</Button>
+        <Button className="mt-6 cursor-pointer">Visit Now</Button>
       </div>
     </section>
   )

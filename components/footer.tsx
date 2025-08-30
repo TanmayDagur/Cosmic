@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator"
 
-export function SiteFooter() {
+export function Footer() {
   return (
     <footer className="mt-16 bg-card text-card-foreground">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-12 md:grid-cols-4">

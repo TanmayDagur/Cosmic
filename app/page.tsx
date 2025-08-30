@@ -2,7 +2,7 @@
 import { Hero } from "@/components/hero"
 import { Offer } from "@/components/Offer"
 import { Services } from "@/components/Services"
-import { SiteFooter } from "@/components/site-footer"
+import { Footer } from "@/components/footer"
 import { Stats } from "@/components/Stats"
 import { Testimonials } from "@/components/Testimonials"
 import { Video } from "@/components/Video"
@@ -29,7 +29,7 @@ export default function Page() {
 
       <Offer />
 
-      <SiteFooter />
+      <Footer />
     </main>
   )
 }

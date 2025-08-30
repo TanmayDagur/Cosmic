@@ -23,8 +23,8 @@ export function Video() {
           Explore astrology through our comprehensive video library with practical guidance for your spiritual journey.
         </p>
         <div className="mt-4 flex items-center justify-center gap-3">
-          <Button className="shadow">Trending Video</Button>
-          <Button variant="outline">Popular Video</Button>
+          <Button className="shadow cursor-pointer">Trending Video</Button>
+          <Button variant="outline" className="cursor-pointer">Popular Video</Button>
         </div>
       </div>
 
