@@ -1,7 +1,7 @@
 "use client"
 
 import "keen-slider/keen-slider.min.css"
-import { useKeenSlider } from "keen-slider/react"
+import { useKeenSlider, KeenSliderInstance } from "keen-slider/react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -14,18 +14,17 @@ interface Testimonial {
   imageUrl: string
 }
 
-
 function AutoplayPlugin(ms: number) {
-  return (slider: any) => {
-    let timeout: any
+  return (slider: KeenSliderInstance) => {
+    let timeout: ReturnType<typeof setTimeout> | undefined
     let mouseOver = false
 
     function clearNextTimeout() {
-      clearTimeout(timeout)
+      if (timeout) clearTimeout(timeout)
     }
 
     function nextTimeout() {
-      clearTimeout(timeout)
+      clearNextTimeout()
       if (mouseOver) return
       timeout = setTimeout(() => {
         slider.next()
@@ -61,18 +60,17 @@ export function Testimonials() {
         "(max-width: 640px)": { slides: { perView: 1, spacing: 12 } },
       },
     },
-    [AutoplayPlugin(2500)] 
+    [AutoplayPlugin(2500)]
   )
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("/api/testimonials", { cache: "no-store" })
-      const json = await res.json()
+      const json: Testimonial[] = await res.json()
       setData(json)
     }
     fetchData()
   }, [])
-console.log(data)
 
   if (data.length === 0) return <Loader />
 

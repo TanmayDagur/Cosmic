@@ -1,6 +1,6 @@
 import type React from "react"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Star, Users, Trophy } from "lucide-react"
+import { Calendar, Star, Users,} from "lucide-react"
 
 function GuideStat({
   icon,
