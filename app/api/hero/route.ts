@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET(req: Request) {
+export async function GET() {
   return NextResponse.json({
         "title": "Unlock Your Cosmic Destiny",
         "subtitle": "Book sessions with expert astrologers and discover your true path.",

@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Calendar, Phone, Sparkles, BadgeCheck, ThumbsUp, Star, ShieldCheck } from "lucide-react"
+import { Calendar, Phone, Sparkles, ThumbsUp, Star, ShieldCheck } from "lucide-react"
 import { useEffect, useState } from "react"
 import Loader from "./loader"
 
